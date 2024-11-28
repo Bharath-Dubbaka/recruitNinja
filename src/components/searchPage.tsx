@@ -6,11 +6,13 @@ import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
+import Image from "next/image";
 
 interface SearchResult {
    title: string;
    link: string;
    snippet: string;
+   image?: string; // Add the image property as optional
 }
 
 export default function SearchPage() {
@@ -22,65 +24,40 @@ export default function SearchPage() {
    const [searchString, setSearchString] = useState("");
    const [showResults, setShowResults] = useState(false);
    const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+   //    console.log(searchResults, "line25");
    const [loading, setLoading] = useState(false);
-   //    const [visitedProfiles, setVisitedProfiles] = useState<string[]>(() => {
-   //       // Load visited profiles from localStorage on initial render
-   //       const saved = localStorage.getItem("visitedProfiles");
-   //       return saved ? JSON.parse(saved) : [];
-   //    });
-   //    const [hideVisited, setHideVisited] = useState(false);
+   const [page, setPage] = useState(1); // Pagination state
 
-   // Save visited profiles to localStorage whenever it changes
-   //    useEffect(() => {
-   //       localStorage.setItem("visitedProfiles", JSON.stringify(visitedProfiles));
-   //    }, [visitedProfiles]);
+   const fetchResults = async (page: number) => {
+      // Fetch search results from API with pagination
+      const startIndex = (page - 1) * 10 + 1; // API uses 1-based indexing for start
+      const params = new URLSearchParams({
+         cx: process.env.NEXT_PUBLIC_CSE_SEARCH_ENGINE_ID || "", // Your Custom Search Engine ID
+         key: process.env.NEXT_PUBLIC_CSE_API_KEY || "", // Your API Key
+         q: searchString, // Example query
+         start: startIndex.toString(), // Pagination index
+      });
 
-   //    useEffect(() => {
-   //       if (showResults) {
-   //          // 🆕 Function to handle iframe content
-   //          const handleIframeLoad = () => {
-   //             // 🆕 Select iframe element
-   //             const iframe = document.getElementById(
-   //                "search-results-iframe"
-   //             ) as HTMLIFrameElement;
-   //             const iframeDoc =
-   //                iframe?.contentDocument || iframe?.contentWindow?.document;
+      const response = await fetch(
+         `https://www.googleapis.com/customsearch/v1?${params}`
+      );
+      const data = await response.json();
 
-   //             if (iframeDoc) {
-   //                // 🆕 Add click event listener to intercept links
-   //                iframeDoc.addEventListener("click", (e) => {
-   //                   const target = e.target as HTMLElement;
-   //                   const link = target.closest("a") as HTMLAnchorElement;
+      const results =
+         data.items?.map((item: any) => ({
+            title: item.title || "",
+            link: item.link || "",
+            snippet: item.snippet || "",
+            image: item.pagemap?.cse_image?.[0]?.src || "",
+         })) || [];
 
-   //                   // 🆕 Check if clicked link is a LinkedIn profile
-   //                   if (link && link.href.includes("linkedin.com/in/")) {
-   //                      e.preventDefault(); // 🆕 Prevent default link behavior
-   //                      window.open(link.href, "_blank"); // 🆕 Open in new tab
-   //                   }
-   //                });
-   //             }
-   //          };
+      setSearchResults(results);
+   };
 
-   //          // 🆕 Attach load event listener to iframe
-   //          const iframe = document.getElementById(
-   //             "search-results-iframe"
-   //          ) as HTMLIFrameElement;
-   //          if (iframe) {
-   //             iframe.addEventListener("load", handleIframeLoad);
-   //             return () => {
-   //                iframe.removeEventListener("load", handleIframeLoad);
-   //             };
-   //          }
-
-   //          //  localStorage.setItem(
-   //          //     "visitedProfiles",
-   //          //     JSON.stringify(visitedProfiles)
-   //          //  );
-   //       }
-   //    }, [
-   //       showResults,
-   //       // visitedProfiles
-   //    ]);
+   // Fetch results on component mount or when page changes
+   React.useEffect(() => {
+      fetchResults(page);
+   }, [page]);
 
    const generateSearchString = () => {
       let query = "site:linkedin.com/in/";
@@ -123,13 +100,13 @@ export default function SearchPage() {
             // hl: "en",
             source: "gcsc",
             cselibv: "5c8d58cbdc1332a7", // Use a consistent, known value
-            cx: "e0fdf08f943434fa8", // Your Custom Search Engine ID
-            key: "AIzaSyAWqo3D1Etn9xvZO5RpN6QcW0n0e-9OHo8", // Your API Key
+            cx: process.env.NEXT_PUBLIC_CSE_SEARCH_ENGINE_ID || "", // Your Custom Search Engine ID
+            key: process.env.NEXT_PUBLIC_CSE_API_KEY || "", // Your API Key
             q: searchString, // Use the generated search query string
          });
 
          const response = await fetch(
-            `https://cse.google.com/cse/element/v1?${params.toString()}`,
+            `https://www.googleapis.com/customsearch/v1?${params.toString()}`,
             {
                method: "GET",
                headers: {
@@ -147,13 +124,19 @@ export default function SearchPage() {
 
          const data = await response.json();
 
+         // 🆕 Map the response to extract search result information, including images
          const results =
-            data.results?.map((item: any) => ({
-               title: item.titleNoFormatting || "",
-               link: item.unescapedUrl || "",
-               snippet: item.contentNoFormatting || "",
-            })) || [];
+            data?.items?.map((item: any) => ({
+               title: item.title || "",
+               link: item.link || "",
+               snippet: item.snippet || "",
 
+               image:
+                  item.pagemap?.cse_image?.[0]?.src || // Extract image source if available
+                  item.pagemap?.cse_thumbnail?.[0]?.src ||
+                  "", // Fallback to thumbnail if image not available
+            })) || [];
+         //  console.log(results, "RES");
          setSearchResults(results);
       } catch (error) {
          console.error("Search failed:", error);
@@ -162,28 +145,7 @@ export default function SearchPage() {
          setLoading(false);
       }
    };
-
-   console.log(searchResults, "searchResults outside");
-
-   //    const executeSearch = async () => {
-   //       setShowResults(true);
-   //    };
-
-   //    const closeResults = () => {
-   //       setShowResults(false);
-   //    };
-
-   //    const markProfileAsVisited = (profileUrl: string) => {
-   //       if (!visitedProfiles.includes(profileUrl)) {
-   //          setVisitedProfiles((prev) => [...prev, profileUrl]);
-   //       }
-   //    };
-
-   //    const clearVisitedProfiles = () => {
-   //       setVisitedProfiles([]);
-   //       localStorage.removeItem("visitedProfiles");
-   //    };
-
+   //    console.log(searchResults, "searchResults outside");
    return (
       <div className="max-w-6xl mx-auto">
          <div className={`grid ${showResults ? "grid-cols-1" : "grid-cols-1"}`}>
@@ -195,7 +157,6 @@ export default function SearchPage() {
                      </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                     {/* ... previous input fields remain the same ... */}
                      <div>
                         <label className="block text-sm font-medium mb-1">
                            Keywords
@@ -240,7 +201,6 @@ export default function SearchPage() {
                            onChange={(e: any) => setCompany(e.target.value)}
                         />
                      </div>
-
                      <div>
                         <label className="block text-sm font-medium mb-1">
                            Skills (comma-separated)
@@ -268,7 +228,6 @@ export default function SearchPage() {
                            Search
                         </Button>
                      </div>
-
                      {searchString && (
                         <div className="mt-4 p-4 bg-slate-100 rounded-md">
                            <p className="font-mono text-sm break-all">
@@ -283,7 +242,7 @@ export default function SearchPage() {
             {/* 🆕 NEW SEARCH RESULTS DISPLAY */}
             {loading && <p>Loading results...</p>}
             {searchResults.length > 0 && (
-               <Card className="mt-4">
+               <Card className="mt-4 mb-24">
                   <CardHeader>
                      <CardTitle>Search Results</CardTitle>
                   </CardHeader>
@@ -297,15 +256,50 @@ export default function SearchPage() {
                               href={result.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-blue-600 hover:underline"
+                              className="text-blue-600 hover:underline flex"
                            >
-                              {result.title}
+                              {result.image && (
+                                 <Image
+                                    src={`/api/proxy-image?url=${encodeURIComponent(
+                                       result.image
+                                    )}`}
+                                    alt="i"
+                                    width={80}
+                                    height={80}
+                                    className="rounded-lg mr-4"
+                                 />
+                              )}
+                              <div>
+                                 <div className="font-bold text-md">
+                                    {result.title}
+                                 </div>
+                                 <p className="text-sm text-gray-600 mt-1">
+                                    {result.snippet}
+                                 </p>
+                              </div>
                            </a>
-                           <p className="text-sm text-gray-600 mt-1">
-                              {result.snippet}
-                           </p>
                         </div>
                      ))}
+
+                     {/* Pagination Controls */}
+                     <div className="mt-4 flex justify-between">
+                        <button
+                           className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
+                           onClick={() =>
+                              setPage((prev) => Math.max(prev - 1, 1))
+                           }
+                           disabled={page === 1}
+                        >
+                           Previous
+                        </button>
+                        <span>Page {page}</span>
+                        <button
+                           className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
+                           onClick={() => setPage((prev) => prev + 1)}
+                        >
+                           Next
+                        </button>
+                     </div>
                   </CardContent>
                </Card>
             )}
