@@ -28,7 +28,19 @@ export default function SearchPage() {
    const [loading, setLoading] = useState(false);
    const [page, setPage] = useState(1); // Pagination state
 
+   React.useEffect(() => {
+      // Only fetch results if there's a non-empty search string
+      if (searchString && searchString.trim() !== "site:linkedin.com/in/") {
+         fetchResults(page);
+      }
+   }, [page, searchString]);
+
    const fetchResults = async (page: number) => {
+      // Skip fetching if search string is empty
+      if (!searchString || searchString.trim() === "site:linkedin.com/in/") {
+         setSearchResults([]);
+         return;
+      }
       // Fetch search results from API with pagination
       const startIndex = (page - 1) * 10 + 1; // API uses 1-based indexing for start
       const params = new URLSearchParams({
@@ -53,11 +65,6 @@ export default function SearchPage() {
 
       setSearchResults(results);
    };
-
-   // Fetch results on component mount or when page changes
-   React.useEffect(() => {
-      fetchResults(page);
-   }, [page]);
 
    const generateSearchString = () => {
       let query = "site:linkedin.com/in/";
@@ -87,12 +94,24 @@ export default function SearchPage() {
       }
 
       setSearchString(query);
+      console.log("Generated Query:", query);
+
+      // Check if query is meaningful
+      if (query.trim() !== "site:linkedin.com/in/") {
+         setSearchString(query);
+         executeSearch(query);
+      } else {
+         alert("Please enter at least one search criteria");
+      }
    };
 
-   const executeSearch = async () => {
-      if (!searchString) return;
+   const executeSearch = async (queryToSearch?: string) => {
+      const searchQueryToUse = queryToSearch || searchString;
+
+      if (!searchQueryToUse) return;
 
       setLoading(true);
+      setPage(1);
       try {
          const params = new URLSearchParams({
             rsz: "filtered_cse",
@@ -102,7 +121,7 @@ export default function SearchPage() {
             cselibv: "5c8d58cbdc1332a7", // Use a consistent, known value
             cx: process.env.NEXT_PUBLIC_CSE_SEARCH_ENGINE_ID || "", // Your Custom Search Engine ID
             key: process.env.NEXT_PUBLIC_CSE_API_KEY || "", // Your API Key
-            q: searchString, // Use the generated search query string
+            q: searchQueryToUse, // Use the generated search query string
          });
 
          const response = await fetch(
@@ -145,6 +164,7 @@ export default function SearchPage() {
          setLoading(false);
       }
    };
+
    //    console.log(searchResults, "searchResults outside");
    return (
       <div className="max-w-6xl mx-auto">
@@ -157,17 +177,16 @@ export default function SearchPage() {
                      </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                     <div>
+                     {/* <div>
                         <label className="block text-sm font-medium mb-1">
-                           Keywords
+                           Exact Phrase/Must Have - PREMIUM
                         </label>
                         <Input
                            placeholder="Enter general keywords"
                            value={keywords}
                            onChange={(e: any) => setKeywords(e.target.value)}
                         />
-                     </div>
-
+                     </div> */}
                      <div className="flex">
                         <div className="w-[50%]">
                            <label className="block text-sm font-medium mb-1">
@@ -187,6 +206,7 @@ export default function SearchPage() {
                               placeholder="e.g., San Francisco"
                               value={location}
                               onChange={(e: any) => setLocation(e.target.value)}
+                              //multiple locations at once - PREMIUM
                            />
                         </div>
                      </div>
@@ -206,35 +226,22 @@ export default function SearchPage() {
                            Skills (comma-separated)
                         </label>
                         <Input
-                           placeholder="e.g., python, javascript, react"
+                           placeholder="e.g., javascript, react, react native, css"
                            value={skills}
                            onChange={(e: any) => setSkills(e.target.value)}
+                           // skills with AND OR compilation -  PREMIUM*
                         />
                      </div>
-                     <div className="flex gap-4">
+                     <div className="flex items-center align-middle justify-center">
                         <Button
-                           className="w-full"
+                           className=" w-3/4 mt-4 bg-slate-600 text-white font-semibold hover:bg-slate-800 hover:text-white"
                            onClick={generateSearchString}
-                        >
-                           Generate Search String
-                        </Button>
-                        <Button
-                           className="w-full"
-                           onClick={executeSearch}
-                           disabled={!searchString}
                            variant="outline"
                         >
                            <Search className="w-4 h-4 mr-2" />
                            Search
                         </Button>
                      </div>
-                     {searchString && (
-                        <div className="mt-4 p-4 bg-slate-100 rounded-md">
-                           <p className="font-mono text-sm break-all">
-                              {searchString}
-                           </p>
-                        </div>
-                     )}
                   </CardContent>
                </Card>
             </div>
@@ -263,13 +270,24 @@ export default function SearchPage() {
                                     src={`/api/proxy-image?url=${encodeURIComponent(
                                        result.image
                                     )}`}
-                                    alt="i"
-                                    width={80}
-                                    height={80}
-                                    className="rounded-lg mr-4"
+                                    alt="Profile"
+                                    width={65}
+                                    height={65}
+                                    style={{
+                                       width: 65,
+                                       height: 65,
+                                       marginRight: "10px",
+                                       justifyContent: "center",
+                                       objectFit: "cover", // This will maintain the aspect ratio
+                                       borderRadius: "0.5rem", // equivalent to rounded-lg
+                                    }}
+                                    onError={(e) => {
+                                       console.error("Image load error", e);
+                                       e.currentTarget.style.display = "none";
+                                    }}
                                  />
                               )}
-                              <div>
+                              <div className="">
                                  <div className="font-bold text-md">
                                     {result.title}
                                  </div>
