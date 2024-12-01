@@ -187,9 +187,9 @@ export default function SearchPage() {
                            onChange={(e: any) => setKeywords(e.target.value)}
                         />
                      </div> */}
-                     <div className="flex">
-                        <div className="w-[50%]">
-                           <label className="block text-sm font-medium mb-1">
+                     <div className="flex justify-between">
+                        <div className="w-[44%]">
+                           <label className="block text-sm font-semibold mb-1">
                               Job Title
                            </label>
                            <Input
@@ -198,8 +198,8 @@ export default function SearchPage() {
                               onChange={(e: any) => setJobTitle(e.target.value)}
                            />
                         </div>
-                        <div className="w-[50%]">
-                           <label className="block text-sm font-medium mb-1">
+                        <div className="w-[25%]">
+                           <label className="block text-sm font-semibold mb-1">
                               Location
                            </label>
                            <Input
@@ -209,20 +209,21 @@ export default function SearchPage() {
                               //multiple locations at once - PREMIUM
                            />
                         </div>
+
+                        <div className="w-[25%]">
+                           <label className="block text-sm font-semibold mb-1">
+                              Company
+                           </label>
+                           <Input
+                              placeholder="e.g., Google"
+                              value={company}
+                              onChange={(e: any) => setCompany(e.target.value)}
+                           />
+                        </div>
                      </div>
 
                      <div>
-                        <label className="block text-sm font-medium mb-1">
-                           Company
-                        </label>
-                        <Input
-                           placeholder="e.g., Google"
-                           value={company}
-                           onChange={(e: any) => setCompany(e.target.value)}
-                        />
-                     </div>
-                     <div>
-                        <label className="block text-sm font-medium mb-1">
+                        <label className="block text-sm font-semibold mb-1">
                            Skills (comma-separated)
                         </label>
                         <Input
@@ -234,7 +235,7 @@ export default function SearchPage() {
                      </div>
                      <div className="flex items-center align-middle justify-center">
                         <Button
-                           className=" w-3/4 mt-4 bg-slate-600 text-white font-semibold hover:bg-slate-800 hover:text-white"
+                           className=" w-3/4 mt-4 bg-slate-800 text-white font-semibold hover:bg-slate-600 hover:text-white"
                            onClick={generateSearchString}
                            variant="outline"
                         >
@@ -302,7 +303,7 @@ export default function SearchPage() {
                      {/* Pagination Controls */}
                      <div className="mt-4 flex justify-between">
                         <button
-                           className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
+                           className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded "
                            onClick={() =>
                               setPage((prev) => Math.max(prev - 1, 1))
                            }
@@ -310,9 +311,9 @@ export default function SearchPage() {
                         >
                            Previous
                         </button>
-                        <span>Page {page}</span>
+                        <span className="font-semibold">Page {page}</span>
                         <button
-                           className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
+                           className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded "
                            onClick={() => setPage((prev) => prev + 1)}
                         >
                            Next
