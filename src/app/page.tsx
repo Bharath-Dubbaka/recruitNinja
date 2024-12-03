@@ -7,12 +7,10 @@ import Image from "next/image";
 export default function Home() {
    return (
       <div>
-         <Navbar />
-         <main className="mt-24">
-            <SearchPageBasic />
-            {/* <SearchPage /> */}
-         </main>
-         <Footer />
+        
+            {/* <SearchPageBasic /> */}
+            <SearchPage />
+       
       </div>
    );
 }
