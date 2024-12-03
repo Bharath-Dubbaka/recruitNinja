@@ -15,8 +15,9 @@ const Privacy = () => {
                <section className="bg-slate-50 p-4 rounded-md">
                   <p className="text-slate-800">
                      Our Website, [Your Website Name] ("we," "our," or "us"),
-                     integrates with the Google Custom Search to facilitate
-                     the discovery of publicly available professional profiles.
+                     integrates with the Google Custom Search to facilitate the
+                     discovery of publicly available professional profiles. We
+                     are not affiliated with LinkedIn or Google. .
                   </p>
 
                   <p className="mt-4 text-slate-700">
@@ -30,12 +31,14 @@ const Privacy = () => {
                   <p className="mt-4 text-slate-700">
                      For more information on how Google collects, uses, and
                      protects data, please refer to{" "}
-                     <a
-                        href="https://policies.google.com/privacy"
-                        className="text-blue-600 hover:underline"
-                     >
-                        Google's Privacy Policy
-                     </a>
+                     <strong>
+                        <a
+                           href="https://policies.google.com/privacy"
+                           className="text-blue-600 hover:underline"
+                        >
+                           Google's Privacy Policy
+                        </a>
+                     </strong>
                      .
                   </p>
 
@@ -120,9 +123,9 @@ const Privacy = () => {
                      concerns about your publicly available information, please{" "}
                      <Link
                         href="/contact"
-                        className="inline-flex items-center px-4 py-2 bg-slate-800 text-white rounded-md hover:bg-slate-700 transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+                        className="text-blue-600 hover:underline"
                      >
-                        Contact Us
+                        Contact us
                      </Link>
                      .
                   </p>
