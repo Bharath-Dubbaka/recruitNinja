@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "sonner";
 
 function Contact() {
@@ -20,7 +20,7 @@ function Contact() {
    const validateForm = () => {
       const formErrors: { [key: string]: string } = {};
       const formData = form.current;
-
+      console.log(formData, form.current);
       if (formData) {
          if (!formData.user_name.value)
             formErrors.user_name = "Name is required.";
@@ -39,29 +39,29 @@ function Contact() {
    };
    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      //   if (!validateForm()) return;
+      if (!validateForm()) return;
 
-      //   if (form.current) {
-      //      emailjs
-      //         .sendForm(serviceId, templateId, form.current, {
-      //            publicKey: apiKey,
-      //         })
-      //         .then(
-      //            () => {
-      //               console.log("SUCCESS!");
-      //               toast.success("Successfully sent email to CVtoSalary", {
-      //                  duration: 3000,
-      //               });
-      //               // Clear all the fields and errors
-      //               form.current?.reset();
-      //               setErrors({});
-      //            },
-      //            (error) => {
-      //               console.log("FAILED...", error.text);
-      //               toast.error("Error while trying to server");
-      //            }
-      //         );
-      //   }
+      if (form.current) {
+         emailjs
+            .sendForm(serviceId, templateId, form.current, {
+               publicKey: apiKey,
+            })
+            .then(
+               () => {
+                  console.log("SUCCESS!");
+                  toast.success("Successfully sent email to CVtoSalary", {
+                     duration: 3000,
+                  });
+                  // Clear all the fields and errors
+                  form.current?.reset();
+                  setErrors({});
+               },
+               (error) => {
+                  console.log("FAILED...", error.text);
+                  toast.error("Error while trying to server");
+               }
+            );
+      }
    };
 
    return (
@@ -75,28 +75,20 @@ function Contact() {
                className: "class",
             }}
          />
-         <div
-            className="mt-8 sm:mt-36 md:mt-24 flex flex-col  justify-center items-center"
-            // style={{
-            //    position: "relative",
-            //    bottom: "20rem",
-            //    opacity: "0.5",
-            //    textAlign: "center",
-            // }}
-         >
+         <div className="mt-8 sm:mt-36 md:mt-24 flex flex-col  justify-center items-center">
             <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
                <div className="text-3xl sm:text-4xl font-bold text-center">
                   Contact Us
                   {/* / <br /> Privacy policy. */}
                </div>
-               <p className="mt-4 font-semibold text-lg text-black max-w-lg text-center mx-auto">
+               {/* <p className="mt-4 font-semibold text-lg text-black max-w-lg text-center mx-auto">
                   <p>Our Executives will reach you within 24hrs.</p>
-                  {/* <p>Cell: +91 824-762-8499</p>
+                  <p>Cell: +91 824-762-8499</p>
                   <p>
                      Address: 8-1-195, Shivaji Nagar, Hyderabad, Telangana,
                      500003, India
-                  </p> */}
-               </p>
+                  </p> 
+               </p> */}
             </div>
 
             <form
