@@ -167,7 +167,8 @@ export default function SearchPage() {
 
    //    console.log(searchResults, "searchResults outside");
    return (
-      <div className="max-w-3xl mx-auto mt-24" >
+    
+      <div className="max-w-3xl mx-auto mt-20" >
          <div className={`grid ${showResults ? "grid-cols-1" : "grid-cols-1"}`}>
             <div>
                <Card className="mb-6">

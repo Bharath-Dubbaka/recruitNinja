@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
    title: "RecruitNinja - LinkedIn X-Ray Search Tool",
    description:
-      "Made in India, tool to Search LinkedIn profiles using advanced Boolean search strings",
+      "Made in India, X Ray search tool to Search LinkedIn profiles using advanced Boolean strings",
 };
 
 export default function RootLayout({
@@ -19,9 +19,9 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
-         <body className={inter.className}>
+         <body className={`${inter.className} min-h-screen flex flex-col`}>
             <Navbar />
-            <main>{children}</main>
+            <main className="flex-grow">{children}</main>
             <Footer />
          </body>
       </html>

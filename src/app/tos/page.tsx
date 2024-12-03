@@ -30,9 +30,9 @@ const TermsOfService = () => {
                   <p className="text-slate-700">
                      RecruitNinja provides a search tool that retrieves publicly
                      available professional profiles using Google's Custom
-                     Search. Our service is intended to assist recruiters
-                     and hiring managers in finding professional information
-                     through legal and ethical means.
+                     Search. Our service is intended to assist recruiters and
+                     hiring managers in finding professional information through
+                     legal and ethical means.
                   </p>
                </section>
 
@@ -170,11 +170,8 @@ const TermsOfService = () => {
                </section>
 
                <div className="mt-8 text-sm text-slate-600 italic text-center">
-                  <p>Last Updated: {new Date().toLocaleDateString()}</p>
-                  <p>
-                     © {new Date().getFullYear()} RecruitNinja. All Rights
-                     Reserved.
-                  </p>
+                  {/* <p>Last Updated: {new Date().toLocaleDateString()}</p> */}
+                  <p>© 2024 RecruitNinja. All Rights Reserved.</p>
                </div>
             </div>
 

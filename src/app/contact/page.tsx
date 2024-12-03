@@ -94,7 +94,7 @@ function Contact() {
             <form
                ref={form}
                onSubmit={sendEmail}
-               className="text-black bg-slate-100 flex flex-col w-[85%] sm:w-[66%] md:w-[56%] mb-40 rounded-lg px-2 py-4 sm:px-6 sm:py-4 border border-gray-200"
+               className="text-black  flex flex-col w-[85%] sm:w-[66%] md:w-[56%] mb-40 rounded-lg px-2 py-4 sm:px-6 sm:py-4 border border-gray-200"
             >
                <div className="flex flex-col mb-4">
                   <label className=" mb-1" htmlFor="fullName">
@@ -111,7 +111,7 @@ function Contact() {
                      placeholder="Tyler Durden"
                      id="fullName"
                      className="flex h-10 w-full border-none text-black dark: shadow-input rounded-md px-3 py-2 text-md  file:border-0 file:bg-transparent 
-                      file:text-md font-large placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400"
+                      file:text-md font-large placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400 bg-slate-100"
                   />{" "}
                </div>
                <div className="flex flex-col  mb-4">
@@ -129,7 +129,7 @@ function Contact() {
                      placeholder="projectmayhem@fc.com"
                      id="email"
                      className="flex h-10 w-full border-none text-black dark: shadow-input rounded-md px-3 py-2 text-md  file:border-0 file:bg-transparent 
-                      file:text-md font-large placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400"
+                      file:text-md font-large placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400 bg-slate-100"
                   />{" "}
                </div>
                <div className="flex flex-col  mb-4">
@@ -146,7 +146,7 @@ function Contact() {
                      name="user_subject"
                      id="subject"
                      className="flex h-10 w-full border-none text-black dark: shadow-input rounded-md px-3 py-2 text-md  file:border-0 file:bg-transparent 
-                      file:text-md font-large placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400"
+                      file:text-md font-large placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400 bg-slate-100"
                   />{" "}
                </div>
                <div className="flex flex-col  mb-4">
@@ -162,7 +162,7 @@ function Contact() {
                      name="message"
                      id="messageArea"
                      className="flex h-32 w-full border-none  text-black  rounded-md px-3 py-2 text-md  file:border-0 file:bg-transparent 
-                     file:text-md font-large focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400"
+                     file:text-md font-large focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400 bg-slate-100"
                   />{" "}
                </div>
                <div className="flex justify-center align-middle items-center content-center">

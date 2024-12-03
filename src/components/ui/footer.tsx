@@ -4,12 +4,12 @@ import { Github, Linkedin } from "lucide-react";
 
 export default function Footer() {
    return (
-      <footer className="bg-slate-900 text-white py-8 mt-16">
+      <footer className="bg-slate-900 text-white py-8">
          <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
             <div>
                <h3 className="text-xl font-bold">RecruitNinja</h3>
                <p className="text-gray-400 text-sm mt-2">
-                  Empowering recruiters with advanced LinkedIn search
+                  Empowering recruiters with advanced Xray search
                   capabilities.
                </p>
             </div>
