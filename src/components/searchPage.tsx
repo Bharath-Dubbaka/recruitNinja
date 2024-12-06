@@ -8,6 +8,7 @@ import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
 import Image from "next/image";
 
+
 interface SearchResult {
    title: string;
    link: string;
@@ -167,13 +168,19 @@ export default function SearchPage() {
 
    //    console.log(searchResults, "searchResults outside");
    return (
-    
-      <div className="max-w-3xl mx-auto mt-20" >
+      <div className="max-w-3xl mx-auto mt-20">
          <div className={`grid ${showResults ? "grid-cols-1" : "grid-cols-1"}`}>
             <div>
                <Card className="mb-6">
                   <CardHeader>
                      <CardTitle className="text-2xl font-bold flex justify-between items-center">
+                        {/* <Image
+                           src="/images/mainPageLogo.png" // Path to your logo file
+                           alt="RecruitNinja Logo"
+                           width={30} // Adjust the width and height as needed
+                           height={30}
+                           style={{ width: "auto", height: "auto" }}
+                        /> */}
                         RecruitNinja - LinkedIn X-Ray Search Tool
                      </CardTitle>
                   </CardHeader>
