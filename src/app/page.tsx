@@ -9,8 +9,8 @@ export default function Home() {
    return (
       <div>
          {/* <SearchPageBasic /> */}
-         {/* <SearchPage /> */}
-         <SearchFreePage />
+         <SearchPage />
+         {/* <SearchFreePage /> */}
       </div>
    );
 }
