@@ -36,7 +36,7 @@ const Privacy = () => {
                            href="https://policies.google.com/privacy"
                            className="text-blue-600 hover:underline"
                         >
-                           Google's Privacy Policy
+                           Google&apos;s Privacy Policy
                         </a>
                      </strong>
                      .

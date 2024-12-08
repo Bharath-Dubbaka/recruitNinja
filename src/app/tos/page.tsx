@@ -18,7 +18,7 @@ const TermsOfService = () => {
                      Welcome to RecruitNinja.com ("we," "our," "us"). These
                      Terms of Service govern your use of our professional search
                      tool designed to help recruiters and hiring managers find
-                     publicly available LinkedIn profiles using Google's Custom
+                     publicly available LinkedIn profiles using Google&apos;s Custom
                      Search.
                   </p>
                </section>
@@ -29,7 +29,7 @@ const TermsOfService = () => {
                   </h2>
                   <p className="text-slate-700">
                      RecruitNinja provides a search tool that retrieves publicly
-                     available professional profiles using Google's Custom
+                     available professional profiles using Google&apos;s Custom
                      Search. Our service is intended to assist recruiters and
                      hiring managers in finding professional information through
                      legal and ethical means.

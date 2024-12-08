@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-Here's a simple explanation of each package used to build this project and come to life :
+Here&apos;s a simple explanation of each package used to build this project and come to life :
 @radix-ui/react-slot:
 Lets you inject elements into predefined spots in components
 Used for component composition and flexibility

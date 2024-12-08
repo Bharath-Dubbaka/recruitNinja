@@ -8,7 +8,6 @@ import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
 import Image from "next/image";
 
-
 interface SearchResult {
    title: string;
    link: string;
@@ -30,7 +29,7 @@ export default function SearchPage() {
    const [page, setPage] = useState(1); // Pagination state
 
    React.useEffect(() => {
-      // Only fetch results if there's a non-empty search string
+      // Only fetch results if theres a non empty search string
       if (searchString && searchString.trim() !== "site:linkedin.com/in/") {
          fetchResults(page);
       }
