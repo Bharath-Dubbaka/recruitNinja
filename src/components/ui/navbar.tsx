@@ -9,7 +9,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center space-x-2">
                <Search className="w-8 h-8 text-slate-800" />
                <span className="text-xl font-bold text-slate-800">
-                  RecruitNinja
+               RecruitCatch
                </span>
             </Link>
 

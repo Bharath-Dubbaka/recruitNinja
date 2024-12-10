@@ -15,11 +15,11 @@ const TermsOfService = () => {
                      1. Introduction
                   </h2>
                   <p className="text-slate-700">
-                     Welcome to RecruitNinja.com ("we," "our," "us"). These
+                     Welcome to RecruitCatch.com ("we," "our," "us"). These
                      Terms of Service govern your use of our professional search
                      tool designed to help recruiters and hiring managers find
-                     publicly available LinkedIn profiles using Google&apos;s Custom
-                     Search.
+                     publicly available LinkedIn profiles using Google&apos;s
+                     Custom Search.
                   </p>
                </section>
 
@@ -28,7 +28,7 @@ const TermsOfService = () => {
                      2. Service Description
                   </h2>
                   <p className="text-slate-700">
-                     RecruitNinja provides a search tool that retrieves publicly
+                     RecruitCatch provides a search tool that retrieves publicly
                      available professional profiles using Google&apos;s Custom
                      Search. Our service is intended to assist recruiters and
                      hiring managers in finding professional information through
@@ -42,7 +42,7 @@ const TermsOfService = () => {
                   </h2>
                   <ul className="list-disc list-inside text-slate-700 space-y-2">
                      <li>
-                        Users must use RecruitNinja for legitimate professional
+                        Users must use RecruitCatch for legitimate professional
                         networking purposes
                      </li>
                      <li>Strictly prohibited activities include:</li>
@@ -67,7 +67,7 @@ const TermsOfService = () => {
                      4. Intellectual Property
                   </h2>
                   <p className="text-slate-700">
-                     All content, design, and functionality of RecruitNinja.com
+                     All content, design, and functionality of RecruitCatch.com
                      are exclusively owned by us. Users are granted a limited,
                      non-exclusive license to use the service.
                      <br />
@@ -103,7 +103,7 @@ const TermsOfService = () => {
                      6. Limitation of Liability
                   </h2>
                   <p className="text-slate-700">
-                     RecruitNinja provides its service "as is" without any
+                     RecruitCatch provides its service "as is" without any
                      warranties. We are not responsible for:
                      <ul className="list-disc list-inside ml-4 mt-2">
                         <li>Accuracy of publicly available information</li>
@@ -171,7 +171,7 @@ const TermsOfService = () => {
 
                <div className="mt-8 text-sm text-slate-600 italic text-center">
                   {/* <p>Last Updated: {new Date().toLocaleDateString()}</p> */}
-                  <p>© 2024 RecruitNinja. All Rights Reserved.</p>
+                  <p>© 2024 RecruitCatch. All Rights Reserved.</p>
                </div>
             </div>
 

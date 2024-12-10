@@ -7,7 +7,7 @@ import Footer from "@/components/ui/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-   title: "RecruitNinja - LinkedIn X-Ray Search Tool",
+   title: "recruitCatch - LinkedIn X-Ray Search Tool",
    description:
       "Made in India, X Ray search tool to Search LinkedIn profiles using advanced Boolean strings",
 };

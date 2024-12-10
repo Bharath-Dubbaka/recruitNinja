@@ -7,7 +7,7 @@ export default function Footer() {
       <footer className="bg-slate-900 text-white py-8">
          <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
             <div>
-               <h3 className="text-xl font-bold">RecruitNinja</h3>
+               <h3 className="text-xl font-bold">RecruitCatch</h3>
                <p className="text-gray-400 text-sm mt-2">
                   Empowering recruiters with advanced Xray search
                   capabilities.
@@ -51,7 +51,7 @@ export default function Footer() {
 
          <div className="text-center border-t border-slate-700 mt-6 pt-4">
             <p className="text-sm text-gray-400">
-               © {new Date().getFullYear()} RecruitNinja. All rights reserved.
+               © {new Date().getFullYear()} RecruitCatch. All rights reserved.
             </p>
          </div>
       </footer>

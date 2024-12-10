@@ -27,7 +27,7 @@ export default function SearchFreePage() {
     <div className="max-w-3xl mx-auto mt-20">
       <Card className="mb-6">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold">RecruitNinja - X-Ray Search</CardTitle>
+          <CardTitle className="text-2xl font-bold">RecruitCatch - X-Ray Search</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex justify-between">

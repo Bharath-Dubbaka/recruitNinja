@@ -175,12 +175,12 @@ export default function SearchPage() {
                      <CardTitle className="text-2xl font-bold flex justify-between items-center">
                         {/* <Image
                            src="/images/mainPageLogo.png" // Path to your logo file
-                           alt="RecruitNinja Logo"
+                           alt="RecruitCatch Logo"
                            width={30} // Adjust the width and height as needed
                            height={30}
                            style={{ width: "auto", height: "auto" }}
                         /> */}
-                        RecruitNinja - LinkedIn X-Ray Search Tool
+                        RecruitCatch - LinkedIn X-Ray Search Tool
                      </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
