@@ -7,7 +7,12 @@ import Footer from "@/components/ui/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-   title: "RecruitCatch - LinkedIn X-Ray Search Tool",
+   // title: "RecruitCatch - LinkedIn X-Ray Search Tool",
+   title: {
+      default: "RecruitCatch - XRay Search Tool",
+      template: "%s - RecruitCatch",
+   },
+
    description:
       "X Ray search tool (Made in India) to Search LinkedIn profiles using advanced Boolean strings",
    openGraph: {

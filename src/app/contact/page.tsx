@@ -2,6 +2,11 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "sonner";
+import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//    title: "Contact",
+// };
 
 function Contact() {
    const form = useRef<HTMLFormElement | null>(null);
