@@ -24,9 +24,9 @@ const TermsOfService = () => {
                   <p className="text-slate-700">
                      Welcome to RecruitCatch.com ("we," "our," "us"). These
                      Terms of Service govern your use of our professional search
-                     tool designed to help recruiters and hiring managers (Recruitment) find
-                     publicly available LinkedIn profiles using Google&apos;s
-                     Custom Search.
+                     tool designed to help recruiters and hiring managers
+                     (Recruitment) find publicly available LinkedIn profiles
+                     using Google&apos;s Custom Search.
                   </p>
                </section>
 
@@ -35,11 +35,12 @@ const TermsOfService = () => {
                      2. Service Description
                   </h2>
                   <p className="text-slate-700">
-                     [RecruitCatch.com] provides a Xray search tool that retrieves publicly
-                     available professional profiles using Google&apos;s Custom
-                     Search. Our service is intended to assist recruiters and
-                     hiring managers (Recruitment) in finding professional information through
-                     legal and ethical means.
+                     [RecruitCatch.com] provides a Xray search tool that
+                     retrieves publicly available professional profiles using
+                     Google&apos;s Custom Search. Our service is intended to
+                     assist recruiters and hiring managers (Recruitment) in
+                     finding professional information through legal and ethical
+                     means.
                   </p>
                </section>
 
@@ -95,11 +96,16 @@ const TermsOfService = () => {
                   <p className="text-slate-700">
                      Important Disclaimers:
                      <ul className="list-disc list-inside ml-4 mt-2">
-                        <li>We [RecruitCatch.com] are NOT affiliated with LinkedIn</li>
-                        <li>We [RecruitCatch.com] are NOT affiliated with Google</li>
                         <li>
-                           We [RecruitCatch.com] use Google Custom Search API to retrieve publicly
-                           available profiles
+                           We [RecruitCatch.com] are NOT affiliated with
+                           LinkedIn
+                        </li>
+                        <li>
+                           We [RecruitCatch.com] are NOT affiliated with Google
+                        </li>
+                        <li>
+                           We [RecruitCatch.com] use Google Custom Search API to
+                           retrieve publicly available profiles
                         </li>
                      </ul>
                   </p>
@@ -128,7 +134,10 @@ const TermsOfService = () => {
                   <p className="text-slate-700">
                      Data Usage Policy:
                      <ul className="list-disc list-inside ml-4 mt-2">
-                        <li>We [RecruitCatch.com] do not collect or store personal information</li>
+                        <li>
+                           We [RecruitCatch.com] do not collect or store
+                           personal information
+                        </li>
                         <li>
                            Google Custom Search API retrieves publicly available
                            information
@@ -154,9 +163,9 @@ const TermsOfService = () => {
                      8. Changes to Terms
                   </h2>
                   <p className="text-slate-700">
-                     We [RecruitCatch.com] reserve the right to modify these Terms of Service at
-                     any time. Continued use of the service after changes
-                     constitutes acceptance of new terms.
+                     We [RecruitCatch.com] reserve the right to modify these
+                     Terms of Service at any time. Continued use of the service
+                     after changes constitutes acceptance of new terms.
                   </p>
                </section>
 

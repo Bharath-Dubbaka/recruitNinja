@@ -169,12 +169,12 @@ export default function SearchPage() {
 
    //    console.log(searchResults, "searchResults outside");
    return (
-      <div className="max-w-3xl mx-auto mt-20">
+      <div className="max-w-3xl mx-auto mt-28">
          <Toaster
             position="top-center"
             toastOptions={{
                style: {
-                  background: "lightgreen",
+                  background: "lightblue",
                },
                className: "class",
             }}
