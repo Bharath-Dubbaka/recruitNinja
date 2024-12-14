@@ -10,25 +10,25 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
    // title: "RecruitCatch - LinkedIn X-Ray Search Tool",
    title: {
-      default: "RecruitCatch - XRay Search Tool",
+      default: "RecruitCatch - FREE XRay Search Tool for Linkedin and more",
       template: "%s - RecruitCatch",
    },
-
    description:
-      "X Ray search tool (Made in India) to Search LinkedIn profiles using advanced Boolean strings",
+      "RecruitCatch, a FREE XRay search tool Made in India, designed to simplify Boolean searches. Save time and enhance your recruitment process with this easy-to-use tool to find relevant profiles efficiently and efficiently.",
+
    openGraph: {
       type: "website",
       url: "https://RecruitCatch.com/", // Replace with your actual website URL
-      title: "RecruitCatch - Xray search tool for social/public profiles",
+      title: "RecruitCatch - FREE XRay Search Tool for Linkedin and more",
       description:
-         "X Ray search tool to Search LinkedIn profiles using advanced Boolean strings.",
+         "RecruitCatch, a FREE XRay search tool Made in India, designed to simplify Boolean searches. Save time and enhance your recruitment process with this easy-to-use tool to find relevant profiles efficiently and efficiently.",
       siteName: "RecruitCatch",
       images: [
          {
             url: "https://recruitcatch.com//opengraph-image.png", // Replace with your actual OG image URL
             width: 1200,
             height: 630,
-            alt: "RecruitCatch - Xray search tool for social/public profiles",
+            alt: "RecruitCatch - FREE XRay Search Tool for Linkedin and more",
          },
       ],
    },

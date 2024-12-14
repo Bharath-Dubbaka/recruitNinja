@@ -7,6 +7,8 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
 import Image from "next/image";
+import { FishSymbol } from "lucide-react";
+import { toast, Toaster } from "sonner";
 
 interface SearchResult {
    title: string;
@@ -101,7 +103,7 @@ export default function SearchPage() {
          setSearchString(query);
          executeSearch(query);
       } else {
-         alert("Please enter at least one search criteria");
+         toast.error("Please enter at least one search criteria");
       }
    };
 
@@ -168,9 +170,18 @@ export default function SearchPage() {
    //    console.log(searchResults, "searchResults outside");
    return (
       <div className="max-w-3xl mx-auto mt-20">
+         <Toaster
+            position="top-center"
+            toastOptions={{
+               style: {
+                  background: "lightgreen",
+               },
+               className: "class",
+            }}
+         />
          <div className={`grid ${showResults ? "grid-cols-1" : "grid-cols-1"}`}>
-            <div>
-               <Card className="mb-6">
+            <div className="shadow-lg shadow-slate-200">
+               <Card className="pb-6">
                   <CardHeader>
                      <CardTitle className="text-2xl font-bold flex justify-between items-center">
                         {/* <Image
@@ -180,7 +191,9 @@ export default function SearchPage() {
                            height={30}
                            style={{ width: "auto", height: "auto" }}
                         /> */}
-                        RecruitCatch - LinkedIn X-Ray Search Tool
+                        <FishSymbol className="w-10 h-10 text-slate-600 mr-1" />
+                        RecruitCatch - FREE XRay Search Tool for Linkedin and
+                        more
                      </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -257,7 +270,7 @@ export default function SearchPage() {
             {/* 🆕 NEW SEARCH RESULTS DISPLAY */}
             {loading && <p>Loading results...</p>}
             {searchResults.length > 0 && (
-               <Card className="mt-4 mb-24">
+               <Card className="mt-4 mb-24 shadow-lg shadow-slate-200">
                   <CardHeader>
                      <CardTitle>Search Results</CardTitle>
                   </CardHeader>

@@ -54,7 +54,7 @@ function Contact() {
             .then(
                () => {
                   console.log("SUCCESS!");
-                  toast.success("Successfully sent email to CVtoSalary", {
+                  toast.success("Successfully sent email to RecruitCatch.com", {
                      duration: 3000,
                   });
                   // Clear all the fields and errors

@@ -24,7 +24,7 @@ const TermsOfService = () => {
                   <p className="text-slate-700">
                      Welcome to RecruitCatch.com ("we," "our," "us"). These
                      Terms of Service govern your use of our professional search
-                     tool designed to help recruiters and hiring managers find
+                     tool designed to help recruiters and hiring managers (Recruitment) find
                      publicly available LinkedIn profiles using Google&apos;s
                      Custom Search.
                   </p>
@@ -35,10 +35,10 @@ const TermsOfService = () => {
                      2. Service Description
                   </h2>
                   <p className="text-slate-700">
-                     RecruitCatch provides a search tool that retrieves publicly
+                     [RecruitCatch.com] provides a Xray search tool that retrieves publicly
                      available professional profiles using Google&apos;s Custom
                      Search. Our service is intended to assist recruiters and
-                     hiring managers in finding professional information through
+                     hiring managers (Recruitment) in finding professional information through
                      legal and ethical means.
                   </p>
                </section>
@@ -95,10 +95,10 @@ const TermsOfService = () => {
                   <p className="text-slate-700">
                      Important Disclaimers:
                      <ul className="list-disc list-inside ml-4 mt-2">
-                        <li>We are NOT affiliated with LinkedIn</li>
-                        <li>We are NOT affiliated with Google</li>
+                        <li>We [RecruitCatch.com] are NOT affiliated with LinkedIn</li>
+                        <li>We [RecruitCatch.com] are NOT affiliated with Google</li>
                         <li>
-                           We use Google Custom Search API to retrieve publicly
+                           We [RecruitCatch.com] use Google Custom Search API to retrieve publicly
                            available profiles
                         </li>
                      </ul>
@@ -111,7 +111,7 @@ const TermsOfService = () => {
                   </h2>
                   <p className="text-slate-700">
                      RecruitCatch provides its service "as is" without any
-                     warranties. We are not responsible for:
+                     warranties. We [RecruitCatch.com] are not responsible for:
                      <ul className="list-disc list-inside ml-4 mt-2">
                         <li>Accuracy of publicly available information</li>
                         <li>Any damages resulting from service use</li>
@@ -128,7 +128,7 @@ const TermsOfService = () => {
                   <p className="text-slate-700">
                      Data Usage Policy:
                      <ul className="list-disc list-inside ml-4 mt-2">
-                        <li>We do not collect or store personal information</li>
+                        <li>We [RecruitCatch.com] do not collect or store personal information</li>
                         <li>
                            Google Custom Search API retrieves publicly available
                            information
@@ -154,7 +154,7 @@ const TermsOfService = () => {
                      8. Changes to Terms
                   </h2>
                   <p className="text-slate-700">
-                     We reserve the right to modify these Terms of Service at
+                     We [RecruitCatch.com] reserve the right to modify these Terms of Service at
                      any time. Continued use of the service after changes
                      constitutes acceptance of new terms.
                   </p>
