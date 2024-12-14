@@ -3,7 +3,7 @@ import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
-// import Analytics from "./Analytics";
+import Analytics from "./Analytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,7 +44,7 @@ export default function RootLayout({
          <body className={`${inter.className} min-h-screen flex flex-col`}>
             <Navbar />
             <main className="flex-grow">{children}</main>
-            {/* <Analytics /> */}
+            <Analytics />
 
             <Footer />
          </body>
