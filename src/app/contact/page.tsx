@@ -99,7 +99,7 @@ function Contact() {
             <form
                ref={form}
                onSubmit={sendEmail}
-               className="text-black  flex flex-col w-[85%] sm:w-[66%] md:w-[56%] mb-40 rounded-lg px-2 py-4 sm:px-6 sm:py-4 border border-gray-200"
+               className="bg-slate-400 text-black  flex flex-col w-[85%] sm:w-[66%] md:w-[56%] mb-20 rounded-lg px-2 py-4 sm:px-6 sm:py-4 border border-gray-200 shadow-lg shadow-slate-200 "
             >
                <div className="flex flex-col mb-4">
                   <label className=" mb-1" htmlFor="fullName">
@@ -176,7 +176,7 @@ function Contact() {
                      type="submit"
                      value="Send"
                   >
-                     <div className="text-white px-8 py-2 bg-slate-500 rounded-[6px]  relative group transition duration-200  hover:bg-slate-300 hover:text-black font-semibold">
+                     <div className="text-white px-8 py-2 bg-slate-800 rounded-[6px]  relative group transition duration-200  hover:bg-slate-600 hover:text-white font-semibold">
                         Send Email
                      </div>
                   </button>
