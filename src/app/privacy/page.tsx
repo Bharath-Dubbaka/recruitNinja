@@ -22,7 +22,7 @@ const Privacy = () => {
                   <p className="text-slate-800">
                      Our Website, [RecruitCatch.com] ("we," "our," or "us"),
                      integrates with the Google Custom Search to facilitate the
-                     Xray search by discovery of publicly available professional
+                     X-Ray search by discovery of publicly available professional
                      profiles. We [RecruitCatch.com] are not affiliated with
                      LinkedIn or Google. .
                   </p>

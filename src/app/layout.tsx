@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
    // title: "RecruitCatch - LinkedIn X-Ray Search Tool",
    title: {
-      default: "RecruitCatch - FREE XRay Search Tool for Linkedin and more",
+      default: "RecruitCatch - FREE X-Ray Search Tool for Linkedin and more",
       template: "%s - RecruitCatch",
    },
    description:
-      "RecruitCatch, a FREE XRay search tool Made in India, designed to simplify Boolean searches. Save time and enhance your recruitment process with this easy-to-use tool to find relevant profiles efficiently and efficiently.",
+      "RecruitCatch, a FREE X-Ray search tool Made in India, designed to simplify Boolean searches. Save time and enhance your recruitment process with this easy-to-use tool to find relevant profiles efficiently and efficiently.",
 
    openGraph: {
       type: "website",

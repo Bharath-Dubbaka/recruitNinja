@@ -9,6 +9,8 @@ import { Checkbox } from "./ui/checkbox";
 import Image from "next/image";
 import { FishSymbol } from "lucide-react";
 import { toast, Toaster } from "sonner";
+import Featuers from "./ui/Featuers";
+import Faq from "./ui/Faq";
 
 interface SearchResult {
    title: string;
@@ -258,7 +260,7 @@ export default function SearchPage() {
                      </div>
                      <div className="flex items-center align-middle justify-center">
                         <Button
-                           className=" w-3/4 mt-4 bg-slate-800 text-white font-semibold hover:bg-slate-600 hover:text-white"
+                           className=" w-3/4 mt-4  text-white font-semibold bg-slate-700 hover:bg-slate-800 hover:text-white"
                            onClick={generateSearchString}
                            variant="outline"
                         >
@@ -346,6 +348,8 @@ export default function SearchPage() {
                </Card>
             )}
          </div>
+         <Featuers />
+         <Faq />
       </div>
    );
 }

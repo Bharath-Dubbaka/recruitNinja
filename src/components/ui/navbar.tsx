@@ -5,7 +5,7 @@ import { Search, Home, FishSymbol } from "lucide-react";
 export default function Navbar() {
    return (
       <nav className="fixed top-0 left-0 w-full z-50 bg-slate-700 text-white  shadow-md">
-         <div className="w-full mx-auto px-4 py-3 flex justify-between items-center">
+         <div className="w-full mx-auto px-4 py-4 flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-2">
                <FishSymbol className="w-8 h-8 text-white" />
                <span className="text-md md:text-xl font-bold">
