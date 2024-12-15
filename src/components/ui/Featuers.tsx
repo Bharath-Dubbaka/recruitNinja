@@ -27,7 +27,7 @@ const Featuers = () => {
                <div className="w-full sm:w-1/3 text-center p-4 bg-white shadow-md">
                   <h3 className="font-semibold text-lg">Fast and Reliable</h3>
                   <p className="text-slate-600 mt-2">
-                     Save time with quick and accurate results. Whether you're
+                     Save time with quick and accurate results. Whether you are
                      exploring LinkedIn Xray search techniques or performing
                      efficient Xray search for recruitment.
                   </p>
