@@ -45,12 +45,12 @@ const Faq: React.FC = () => {
       {
          title: "How does RecruitCatch work?",
          content:
-            "Simply enter the job title, location, company, and skills, and RecruitCatch generates a LinkedIn Boolean search query for you.",
+            "Simply enter the job title, location, company, and skills, and RecruitCatch generates a LinkedIn X-Ray search query for you by the power of Boolean strings behind the scenes.",
       },
       {
          title: "What is X-Ray Search?",
          content:
-            "X-Ray search is a technique used by recruiter/recruitment to find professional profiles using advanced search operators, leveraging Google Custom X-ray Search to discover publicly available professional information.",
+            "X-Ray search is a technique used by recruiter/recruitment to find professional profiles using advanced search operators, leveraging Google Custom X-ray Search to discover publicly available professional information on social media such as LinkedIn , Github, X (Twitter) etc.",
       },
       {
          title: "What information does RecruitCatch collect?",
@@ -60,7 +60,7 @@ const Faq: React.FC = () => {
       {
          title: "Is my search data private?",
          content:
-            "Search queries are processed through Google. While we do not store your search queries, Google may collect information according to its privacy policy.",
+            "Search queries are processed through Google. While we do not store your search queries, Google may collect information according to its privacy policy. But other than that we do not store any data from Google or LinkedIn",
       },
       {
          title: "Do you violate any platform's terms of service?",
@@ -74,7 +74,7 @@ const Faq: React.FC = () => {
       {
          title: "Are you affiliated with LinkedIn or Google?",
          content:
-            "No, RecruitCatch is not affiliated with LinkedIn or Google. We are an independent service using Google Custom Search API for professional profile discovery.",
+            "No, RecruitCatch is not affiliated with LinkedIn or Google. We are an independent service using Google API for professional profile discovery which are publicly available.",
       },
    ];
 
