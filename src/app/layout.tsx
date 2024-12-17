@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       siteName: "RecruitCatch",
       images: [
          {
-            url: "https://recruitcatch.com//opengraph-image.png", // Replace with your actual OG image URL
+            url: "https://recruitcatch.com/opengraph-image.png", // Replace with your actual OG image URL
             width: 1200,
             height: 630,
             alt: "RecruitCatch - FREE XRay Search Tool for Linkedin and more",
@@ -42,14 +42,15 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
-         <head>
+         <head></head>
+         <body className={`${inter.className} min-h-screen flex flex-col`}>
             <Script
+               id="adsense-script"
                async
                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3419750124614833"
                crossOrigin="anonymous"
             ></Script>
-         </head>
-         <body className={`${inter.className} min-h-screen flex flex-col`}>
+            
             <Navbar />
             <main className="flex-grow">{children}</main>
             <Analytics />
