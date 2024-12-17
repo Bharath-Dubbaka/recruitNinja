@@ -11,6 +11,7 @@ import { FishSymbol } from "lucide-react";
 import { toast, Toaster } from "sonner";
 import Featuers from "./ui/Featuers";
 import Faq from "./ui/Faq";
+import { ClipLoader } from "react-spinners";
 
 interface SearchResult {
    title: string;
@@ -171,7 +172,7 @@ export default function SearchPage() {
 
    //    console.log(searchResults, "searchResults outside");
    return (
-      <div className="md:max-w-2xl mx-auto mt-28">
+      <div className=" max-w-[92%] sm:max-w-[55%] mx-auto mt-28">
          <Toaster
             position="top-center"
             toastOptions={{
@@ -211,8 +212,8 @@ export default function SearchPage() {
                            onChange={(e: any) => setKeywords(e.target.value)}
                         />
                      </div> */}
-                     <div className="flex justify-between">
-                        <div className="w-[44%]">
+                     <div className="flex flex-col sm:flex-row justify-between">
+                        <div className="w-full sm:w-[44%]">
                            <label className="block text-sm font-semibold mb-1">
                               Job Title
                            </label>
@@ -222,7 +223,7 @@ export default function SearchPage() {
                               onChange={(e: any) => setJobTitle(e.target.value)}
                            />
                         </div>
-                        <div className="w-[25%]">
+                        <div className="w-full sm:w-[25%]">
                            <label className="block text-sm font-semibold mb-1">
                               Location
                            </label>
@@ -234,7 +235,7 @@ export default function SearchPage() {
                            />
                         </div>
 
-                        <div className="w-[25%]">
+                        <div className="w-full sm:w-[25%]">
                            <label className="block text-sm font-semibold mb-1">
                               Company
                            </label>
@@ -272,7 +273,11 @@ export default function SearchPage() {
             </div>
 
             {/* 🆕 NEW SEARCH RESULTS DISPLAY */}
-            {loading && <p>Loading results...</p>}
+            {loading && (
+               <div className="flex justify-center items-center mt-4">
+                  <ClipLoader size={80} color={"#3498db"} loading={loading} />
+               </div>
+            )}
             {searchResults.length > 0 && (
                <Card className="mt-4 mb-24 shadow-lg shadow-slate-200">
                   <CardHeader>
