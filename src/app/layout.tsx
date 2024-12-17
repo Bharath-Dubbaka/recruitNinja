@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import Analytics from "./Analytics";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,6 +42,13 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
+         <head>
+            <Script
+               async
+               src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3419750124614833"
+               crossOrigin="anonymous"
+            ></Script>
+         </head>
          <body className={`${inter.className} min-h-screen flex flex-col`}>
             <Navbar />
             <main className="flex-grow">{children}</main>
