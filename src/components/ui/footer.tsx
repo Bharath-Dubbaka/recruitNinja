@@ -34,20 +34,20 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex flex-row space-x-4">
                <a
-                  href="https://github.com/your-repo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gray-300"
-               >
-                  <Twitter className="w-6 h-6" />
-               </a>
-               <a
-                  href="https://linkedin.com/company/your-company"
+                  href="https://www.linkedin.com/company/recruitcatch/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gray-300"
                >
                   <Linkedin className="w-6 h-6" />
+               </a>
+               <a
+                  href="https://x.com/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-300"
+               >
+                  <Twitter className="w-6 h-6" />
                </a>
             </div>
          </div>

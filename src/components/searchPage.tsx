@@ -187,7 +187,7 @@ export default function SearchPage() {
                   <CardHeader>
                      <CardTitle className="text-2xl font-bold flex justify-between items-center">
                         {/* <Image
-                           src="/images/mainPageLogo.png" // Path to your logo file
+                           src="/images/IconRecruitCatch.png" // Path to your logo file
                            alt="RecruitCatch Logo"
                            width={30} // Adjust the width and height as needed
                            height={30}
