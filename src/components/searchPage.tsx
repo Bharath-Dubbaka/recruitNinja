@@ -186,7 +186,7 @@ export default function SearchPage() {
             <div className="shadow-lg shadow-slate-200">
                <Card className="pb-6">
                   <CardHeader>
-                     <CardTitle className="text-2xl font-bold flex justify-between items-center">
+                     <CardTitle className="text-2xl font-bold flex items-center">
                         {/* <Image
                            src="/images/IconRecruitCatch.png" // Path to your logo file
                            alt="RecruitCatch Logo"
