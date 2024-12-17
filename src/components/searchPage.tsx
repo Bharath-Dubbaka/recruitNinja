@@ -171,7 +171,7 @@ export default function SearchPage() {
 
    //    console.log(searchResults, "searchResults outside");
    return (
-      <div className="md:max-w-3xl mx-auto mt-28">
+      <div className="md:max-w-2xl mx-auto mt-28">
          <Toaster
             position="top-center"
             toastOptions={{
@@ -196,8 +196,7 @@ export default function SearchPage() {
                         <FishSymbol className="w-10 h-10 text-slate-600 mr-1" />
                         <h1 className="text-xl md:text-2xl font-bold flex justify-between items-center">
                            {" "}
-                           RecruitCatch - FREE XRay Search Tool for Linkedin and
-                           more
+                           RecruitCatch - FREE XRay Search Tool for Linkedin
                         </h1>
                      </CardTitle>
                   </CardHeader>
