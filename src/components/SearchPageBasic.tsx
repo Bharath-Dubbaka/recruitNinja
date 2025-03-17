@@ -7,6 +7,8 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { FishSymbol } from "lucide-react";
 import { Toaster } from "sonner";
+import Faq from "./ui/Faq";
+import Featuers from "./ui/Featuers";
 
 export default function SearchPageBasic() {
    const [jobTitle, setJobTitle] = useState("");
@@ -174,7 +176,7 @@ export default function SearchPageBasic() {
                            />
                         </div>
                         <Button
-                           className="w-full bg-gradient-to-br from-green-600    to-teal-800 hover:to-purple-500 text-white "
+                           className="w-full bg-gradient-to-br from-green-600    to-teal-800 hover:to-teal-600 text-white "
                            onClick={() => executeSearch(false)}
                         >
                            <Search className="w-4 h-4 mr-2" />
@@ -184,6 +186,8 @@ export default function SearchPageBasic() {
                   </CardContent>
                </Card>
             </div>
+            <Featuers />
+            <Faq />
          </div>
       </div>
    );
