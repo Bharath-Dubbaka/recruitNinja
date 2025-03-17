@@ -55,7 +55,7 @@ export default function SearchFreePage() {
           <Button onClick={generateSearchString}>Search</Button>
         </CardContent>
       </Card>
-
+ 
       {searchQuery && (
         <iframe
           src={`https://cse.google.com/cse?cx=service_f3p82ac&q=${encodeURIComponent(

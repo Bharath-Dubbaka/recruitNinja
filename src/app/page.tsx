@@ -8,8 +8,8 @@ import Image from "next/image";
 export default function Home() {
    return (
       <div>
-         {/* <SearchPageBasic /> */}
-         <SearchPage />
+         <SearchPageBasic />
+         {/* <SearchPage /> */}
          {/* <SearchFreePage /> */}
       </div>
    );
