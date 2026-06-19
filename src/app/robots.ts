@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-   return {
-      rules: {
-         userAgent: "*",
-         allow: "/",
-         disallow: "/whyus",
-      },
-      sitemap: "https://recruitcatch.com//sitemap.xml",
-   };
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/whyus", "/api/"],
+    },
+    sitemap: "https://recruitcatch.netlify.app/sitemap.xml",
+  };
 }

@@ -22,7 +22,7 @@ const TermsOfService = () => {
                      1. Introduction
                   </h2>
                   <p className="text-slate-700">
-                     Welcome to RecruitCatch.com ("we," "our," "us"). These
+                     Welcome to RecruitCatch.netlify.app ("we," "our," "us"). These
                      Terms of Service govern your use of our professional search
                      tool designed to help recruiters and hiring managers
                      (Recruitment) find publicly available LinkedIn profiles
@@ -35,7 +35,7 @@ const TermsOfService = () => {
                      2. Service Description
                   </h2>
                   <p className="text-slate-700">
-                     [RecruitCatch.com] provides a Xray search tool that
+                     [RecruitCatch.netlify.app] provides a Xray search tool that
                      retrieves publicly available professional profiles using
                      Google&apos;s Custom Search. Our service is intended to
                      assist recruiters and hiring managers (Recruitment) in
@@ -75,7 +75,7 @@ const TermsOfService = () => {
                      4. Intellectual Property
                   </h2>
                   <p className="text-slate-700">
-                     All content, design, and functionality of RecruitCatch.com
+                     All content, design, and functionality of RecruitCatch.netlify.app
                      are exclusively owned by us. Users are granted a limited,
                      non-exclusive license to use the service.
                      <br />
@@ -97,14 +97,14 @@ const TermsOfService = () => {
                      Important Disclaimers:
                      <ul className="list-disc list-inside ml-4 mt-2">
                         <li>
-                           We [RecruitCatch.com] are NOT affiliated with
+                           We [RecruitCatch.netlify.app] are NOT affiliated with
                            LinkedIn
                         </li>
                         <li>
-                           We [RecruitCatch.com] are NOT affiliated with Google
+                           We [RecruitCatch.netlify.app] are NOT affiliated with Google
                         </li>
                         <li>
-                           We [RecruitCatch.com] use Google Custom Search API to
+                           We [RecruitCatch.netlify.app] use Google Custom Search API to
                            retrieve publicly available profiles
                         </li>
                      </ul>
@@ -117,7 +117,7 @@ const TermsOfService = () => {
                   </h2>
                   <p className="text-slate-700">
                      RecruitCatch provides its service "as is" without any
-                     warranties. We [RecruitCatch.com] are not responsible for:
+                     warranties. We [RecruitCatch.netlify.app] are not responsible for:
                      <ul className="list-disc list-inside ml-4 mt-2">
                         <li>Accuracy of publicly available information</li>
                         <li>Any damages resulting from service use</li>
@@ -135,7 +135,7 @@ const TermsOfService = () => {
                      Data Usage Policy:
                      <ul className="list-disc list-inside ml-4 mt-2">
                         <li>
-                           We [RecruitCatch.com] do not collect or store
+                           We [RecruitCatch.netlify.app] do not collect or store
                            personal information
                         </li>
                         <li>
@@ -163,7 +163,7 @@ const TermsOfService = () => {
                      8. Changes to Terms
                   </h2>
                   <p className="text-slate-700">
-                     We [RecruitCatch.com] reserve the right to modify these
+                     We [RecruitCatch.netlify.app] reserve the right to modify these
                      Terms of Service at any time. Continued use of the service
                      after changes constitutes acceptance of new terms.
                   </p>

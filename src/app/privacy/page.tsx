@@ -20,18 +20,18 @@ const Privacy = () => {
             <div className="space-y-6">
                <section className="bg-slate-50 p-4 rounded-md">
                   <p className="text-slate-800">
-                     Our Website, [RecruitCatch.com] ("we," "our," or "us"),
+                     Our Website, [RecruitCatch.netlify.app] ("we," "our," or "us"),
                      integrates with the Google Custom Search to facilitate the
                      X-Ray search by discovery of publicly available professional
-                     profiles. We [RecruitCatch.com] are not affiliated with
+                     profiles. We [RecruitCatch.netlify.app] are not affiliated with
                      LinkedIn or Google. .
                   </p>
 
                   <p className="mt-4 text-slate-700">
                      When users perform a XRay search on our Website
-                     [RecruitCatch.com], their search queries may be transmitted
+                     [RecruitCatch.netlify.app], their search queries may be transmitted
                      to and processed by the Google Custom Search API. Please
-                     note that while we [RecruitCatch.com] do not directly
+                     note that while we [RecruitCatch.netlify.app] do not directly
                      collect or store these search queries, Google may collect
                      information as per its own privacy policies.
                   </p>
@@ -59,10 +59,10 @@ const Privacy = () => {
 
                <section className="bg-slate-50 p-4 rounded-md">
                   <h2 className="text-2xl font-semibold text-slate-800 mb-4">
-                     1. Information We Collect [RecruitCatch.com]
+                     1. Information We Collect [RecruitCatch.netlify.app]
                   </h2>
                   <p className="text-slate-700">
-                     We [RecruitCatch.com] do not directly collect or store any
+                     We [RecruitCatch.netlify.app] do not directly collect or store any
                      personal information from external websites. Our service
                      uses the Google Custom Search API to retrieve publicly
                      available information.
@@ -91,7 +91,7 @@ const Privacy = () => {
                      2. Usage Disclaimer
                   </h2>
                   <p className="text-slate-700">
-                     We [RecruitCatch.com] use the Google Custom Search API to:
+                     We [RecruitCatch.netlify.app] use the Google Custom Search API to:
                      <ul className="list-disc list-inside ml-4 mt-2">
                         <li>
                            Retrieve publicly available professional information
@@ -113,7 +113,7 @@ const Privacy = () => {
                      3. Data Handling
                   </h2>
                   <p className="text-slate-700">
-                     We [RecruitCatch.com] do not:
+                     We [RecruitCatch.netlify.app] do not:
                      <ul className="list-disc list-inside ml-4 mt-2">
                         <li>Store personal profile data on our servers</li>
                         <li>Extract private or hidden information</li>
