@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "boolean string generator",
   ],
   verification: {
-    google: "PASTE_YOUR_CONTENT_VALUE_HERE",
+    google: "ItCcUb8icysKoLcesP3kce0bVs2CeAvboIlzZLHjHO4",
   },
   alternates: {
     canonical: "https://recruitcatch.netlify.app",
